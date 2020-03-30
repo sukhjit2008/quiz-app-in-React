@@ -8,9 +8,9 @@ const item = ({
   disableTheRadioButtons
 }) => {
   const ans = question.answers.map(answer => {
-    // const correct = answer.isCorrectAns ? (
-    //   <p style={{ color: "green" }}>Answer is correct</p>
-    // ) : null;
+    const correct = answer.isCorrectAns ? (
+      <p style={{ color: "green" }}>Answer is correct</p>
+    ) : null;
     return (
       <div key={answer.no}>
         <li className="item">
@@ -25,13 +25,13 @@ const item = ({
             onClick={() => onClickAns(answer.no, answer.correct)}
             htmlFor={answer.id}
             className="label "
-            // style={
-            //   !answer.isCorrectAns ? { color: "#eb2f64" } : { color: "green" }
-            // }
+            style={
+              !answer.isCorrectAns ? { color: "#eb2f64" } : { color: "green" }
+            }
           >
             {answer.ans}
           </label>
-          {/* {correct} */}
+          {correct}
         </li>
       </div>
     );
