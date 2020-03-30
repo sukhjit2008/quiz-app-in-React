@@ -1,0 +1,159 @@
+.App {
+  text-align: center;
+  margin-top: 4rem;
+  background-color: white;
+  padding: 3rem;
+  min-width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 30vh;
+  box-shadow: 0px 1rem 2rem rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+
+}
+
+.btn {
+  background-color: #eb2f64;
+  border: none;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: .5rem 2rem;
+  font-size: 1.4rem;
+  display: inline-block;
+  border-radius: 200px;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.questionAnswer {
+  padding: 2rem;
+  margin: 1rem 0;
+
+}
+
+.btn:hover {
+  box-shadow: 0px 1rem 2rem rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+}
+
+.btn:active {
+  box-shadow: 0px .5rem 1rem rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+.btn__start {}
+
+.button-box {
+  padding: 1rem;
+
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+
+}
+
+.btn__submit {
+  margin-right: 1rem;
+}
+
+.btn__next {}
+
+.heading-h1 {
+  font-size: 3rem;
+}
+
+.heading-h4 {
+  font-size: 1.8rem;
+  margin-bottom: 5rem;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  width: 50vw;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, auto));
+  grid-row-gap: 1rem;
+  background-color: #f4f2f2;
+  padding: 3rem;
+
+
+}
+
+
+.item {
+  font-size: 1rem;
+
+}
+
+.item:not(:last-child) {
+  margin-bottom: .8rem;
+
+
+}
+
+.checkbox {
+  display: none;
+}
+
+.label {
+  position: relative;
+  font-size: 2rem;
+  z-index: 2;
+}
+
+
+.label::before {
+  content: '';
+  display: inline-block;
+  width: 1.7rem;
+  height: 1.7rem;
+  border: .4rem solid #eb2f64;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateX(-7rem);
+  cursor: pointer;
+  z-index: 1;
+
+}
+
+.label::after {
+  content: '';
+  display: inline-block;
+  width: 1.1rem;
+  height: 1.1rem;
+  background-color: #eb2f64;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateX(-7rem);
+  display: none;
+  z-index: 1;
+
+}
+
+
+
+.checkbox:checked~.label::after {
+  display: inline;
+
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: inline;
+}
