@@ -19,7 +19,6 @@ const item = ({
             id={answer.id}
             className="checkbox "
             onChange={onCheckedHandler}
-            disabled={disableTheRadioButtons}
           />
 
           <label
